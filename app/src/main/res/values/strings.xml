@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Project1Android</string>
+    <string name="courseNumber">INFO-6124</string>
+    <string name="course">INFO-6124</string>
+    <string name="percentage">Please Select the Percentage of the grades</string>
+    <string name="gradeRecievedText">Please input the grade recieved</string>
+    <string name="recordGradeButton">Record Grade</string>
+    <string name="aboutApp">Show Student Info</string>
+    <string name="resetGrades">Reset Grades</string>
+    <string name="radiobutton1">5%</string>
+    <string name="radiobutton2">10%</string>
+    <string name="radiobutton3">15%</string>
+    <string name="radiobutton4">20%</string>
+    <string name="backButtonActivity2">Back to Record Grade</string>
+    <string name="courseNumberr">course number</string>
+    <string name="gradeType">Grade type</string>
+    <string name="percentagee">Percentage</string>
+    <string name="gradeReceived">"Grade received "</string>
+    <string name="coursee">INFO-6124(Android Application Development)</string>
+    <string name="removebutton">Remove Button</string>
+</resources>
+
+    <!--Spinner widget-->
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+    <!--Constraint layout which contain Spinner widget-->
+
+
+<!--<android.support.constraint.ConstraintLayout-->
+
+
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+
+<!--android:layout_width="match_parent"-->
+
+<!--android:layout_height="match_parent"-->
+
+<!--tools:context="Spinner.RecordGrades">-->
+
+
+<!--Spinner widget-->
+
+
+
+<!--</android.support.constraint.ConstraintLayout>-->
