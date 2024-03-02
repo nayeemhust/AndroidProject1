@@ -18,6 +18,16 @@
     <string name="gradeReceived">"Grade received "</string>
     <string name="coursee">INFO-6124(Android Application Development)</string>
     <string name="removebutton">Remove Button</string>
+    <string name="author">Author: Nazmul Alam Nayeem</string>
+    <string name="Grading">Grading App</string>
+    <string name="appDescription">This App is Developed as for the Android Development Project of Fanshawe College which is counting and storing all the grades for info-6124.</string>
+    <string name="progressBar">Grade Achived</string>
+    <string name="removebtn">Remove Grades</string>
+    <string name="college">Fanshawe College</string>
+    <string name="infobtn">Go Back</string>
+    <string name="Author">Author: Nazmul Alam Nayeem, Tashi Norbu Lama</string>
+    <string name="gradeRmvd">Remove</string>
+    <string name="delete">Delete</string>
 </resources>
 
     <!--Spinner widget-->

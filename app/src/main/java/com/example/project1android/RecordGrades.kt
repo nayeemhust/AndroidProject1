@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -40,7 +41,6 @@ class RecordGrades : AppCompatActivity() {
         )
         spin.adapter = ad
 
-
         // Initialize UI components
         courseNumberTextView = findViewById(R.id.textView1)
         gradeTypeSpinner = findViewById(R.id.spinner)
@@ -49,23 +49,32 @@ class RecordGrades : AppCompatActivity() {
 
         // Initialize SharedPreferences
         sharedPreferences = getSharedPreferences("grades", Context.MODE_PRIVATE)
+
+
+        val studentInfoButton: Button = findViewById(R.id.showStudent)
+        studentInfoButton.setOnClickListener {
+            // Create an Intent to navigate to StudentInfo activity
+            val intent = Intent(this, StudentInfo::class.java)
+            startActivity(intent)
+
+            // Show a Toast message
+            Toast.makeText(this, "About the App Info", Toast.LENGTH_SHORT).show()
+
+
+        }
     }
 
     fun recordGradeTapped(view: View) {
         val courseNumber = courseNumberTextView.text.toString()
 
-//        Log.d("Debug", "Grade received input: $gradeReceivedString") // Add this line
-
         if (courseNumber.isEmpty()) {
             showError("Please enter course number")
             return
         }
-
         if (percentageRadioGroup.checkedRadioButtonId == -1) {
             showError("Please choose percentage of the grade")
             return
         }
-
         val selectedPercentage = getSelectedPercentage()
         val gradeReceivedString = gradeReceivedEditText.text.toString()
 
@@ -73,13 +82,11 @@ class RecordGrades : AppCompatActivity() {
             showError("Please enter grade received")
             return
         }
-
         val gradeReceived = gradeReceivedString.replace("%", "").trim().toIntOrNull()
         if (gradeReceived == null || gradeReceived > selectedPercentage) {
             showError("Grade received cannot be higher than the selected percentage")
             return
         }
-
 
         saveGrade(courseNumber, selectedPercentage, gradeReceived)
         // Show a Toast message to indicate that the event was recorded
@@ -121,16 +128,12 @@ class RecordGrades : AppCompatActivity() {
         editor.putString("grades", Gson().toJson(listofGrades))
         editor.apply()
     }
-
     private fun showError(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-
-
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-
 }
 
 

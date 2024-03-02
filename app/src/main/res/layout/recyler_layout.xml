@@ -7,27 +7,41 @@
     android:layout_height="wrap_content"
     android:paddingBottom="7dp">
 
+    <ProgressBar
+        android:id="@+id/determinateBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:progress="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/courseNumber"
-        android:layout_width="253dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="252dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="128dp"
         android:hint="@string/courseNumberr"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/gradeType"
-        android:layout_width="228dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
         android:hint="@string/gradeType"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.356"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/courseNumber" />
 
@@ -35,7 +49,7 @@
         android:id="@+id/percentage"
         android:layout_width="231dp"
         android:layout_height="45dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28dp"
         android:hint="@string/percentagee"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -47,11 +61,41 @@
         android:id="@+id/gradeReceived"
         android:layout_width="224dp"
         android:layout_height="46dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28dp"
         android:hint="@string/gradeReceived"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/percentage" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/progressBar"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/determinateBar" />
+
+    <Button
+        android:id="@+id/gradeRemoved"
+        android:layout_width="79dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="144dp"
+        android:background="@color/design_default_color_error"
+        android:onClick="gradeRemoved"
+        android:text="@string/delete"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toEndOf="@+id/gradeType" />
 </androidx.constraintlayout.widget.ConstraintLayout>
